@@ -1,0 +1,44 @@
+.HovelHobo {
+  position: relative;
+}
+.HovelFab {
+  display: none;
+}
+.HovelHobo:hover .HovelFab {
+  display: block;
+  color: black;
+  cursor: pointer;
+  content: '+';
+  font-weight: 500;
+  font-size: 12px;
+  font-family: monospace;
+  text-align: center;
+  line-height: 22px;
+  background: white;
+  border-radius: 22px;
+  width: 22px;
+  height: 22px;
+  box-sizing: border-box;
+  border: 1px black solid;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 1;
+}
+.HovelHobo:hover .HovelFab--bottom {
+  top: auto;
+  bottom: 0;
+  transform: translate3d(-50%, 50%, 0);
+}
+.HovelHobo:hover::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  border: 2px red dotted;
+  pointer-events: none;
+}
